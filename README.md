@@ -37,7 +37,7 @@ Before using the **Food & Drink Generator**, ensure you have the following:
    pip install -r requirements.txt
    ```
 
-## Usage
+## Usage {#gemerating-items}
 1. Place the images of the food and drink items you want to generate in a folder.
 2. Run the script using the *run.bat* file or with the following command:
    ```bash
