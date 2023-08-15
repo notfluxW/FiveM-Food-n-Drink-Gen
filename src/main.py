@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import filedialog
 import shutil
 import datetime
+import time
 
 current_time = datetime.datetime.now()
 timestamp_format = "%Y-%m-%d %H_%M_%S"
@@ -99,6 +100,7 @@ def main():
     root.withdraw()
     print(">>> Directory Selection <<<\n")
     print("Select a directory . . . ")
+    time.sleep(0.5)
     directory = filedialog.askdirectory(title="Select a directory containing images")
 
     if not directory:
