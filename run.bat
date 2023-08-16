@@ -1,23 +1,23 @@
 @echo off
 
-echo Checking for updates...
+@REM echo Checking for updates...
 
-REM Get the current commit hash
-for /f %%H in ('git rev-parse HEAD') do set "current_commit=%%H"
+@REM REM Get the current commit hash
+@REM for /f %%H in ('git rev-parse HEAD') do set "current_commit=%%H"
 
-REM Pull the latest changes from the Git repository
-for /f "delims=" %%I in ('git pull') do (
-    set "git_output=%%I"
-)
+@REM REM Pull the latest changes from the Git repository
+@REM for /f "delims=" %%I in ('git pull') do (
+@REM     set "git_output=%%I"
+@REM )
 
-REM Get the new commit hash after pulling
-for /f %%H in ('git rev-parse HEAD') do set "new_commit=%%H"
+@REM REM Get the new commit hash after pulling
+@REM for /f %%H in ('git rev-parse HEAD') do set "new_commit=%%H"
 
-if "%new_commit%" == "%current_commit%" (
-    echo Food ^& Drink Generator is already up to date.
-) else (
-    echo Food ^& Drink Generator updated successfully.
-)
+@REM if "%new_commit%" == "%current_commit%" (
+@REM     echo Food ^& Drink Generator is already up to date.
+@REM ) else (
+@REM     echo Food ^& Drink Generator updated successfully.
+@REM )
 
 cd src
 
